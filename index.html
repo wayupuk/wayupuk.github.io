@@ -1,7 +1,133 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Hello Github Pages</title>
-  <body>
-    <h1>Hello Github Pages</h1>
-  </body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test on work 1</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop has-text-centered">
+        <h1 class="title is-1 publication-title">
+          Some that will be created soon<br>
+          <span class="subtitle is-3">ABout abcdef</span>
+        </h1>
+        
+        <div class="is-size-5 publication-authors">
+          <span class="author-block">Anonymous Authors</span>
+          <span class="author-block">Anonymous Authors</span>
+          <span class="author-block">Anonymous Authors</span>
+        </div>
+
+        <div class="is-size-5 publication-authors mt-3">
+          <span class="author-block">Some institute on the earth</span>
+        </div>
+
+        <div class="column has-text-centered mt-4">
+          <a href="#" class="button is-dark is-rounded is-outlined">
+            <span>[pdf]</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The objective of this work is to extract target speaker’s voice from a mixture of voices using visual cues. Existing works on audio-visual speech separation have demonstrated their performance with promising intelligibility, but maintaining naturalness remains a challenge. To address this issue, we propose AVDiffuSS, 
+              an audio-visual speech separation model based on a diffusion mechanism known for its capability in generating natural samples. For an effective fusion of the two modalities for diffusion, we also propose a cross-attention-based feature fusion mechanism. This mechanism is specifically tailored for the speech domain to integrate the phonetic information from audiovisual correspondence in speech generation. 
+              In this way, the fusion process maintains the high temporal resolution of the features, without excessive computational requirements. We demonstrate that the proposed framework achieves state-of-the-art results on two benchmarks, including VoxCeleb2 and LRS3, producing speech with notably better naturalness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Demo Video</h2>
+      <p class="mb-4">We show example separation results of our model (AVDiffuSS) with the visualization of input videos.</p>
+      
+      <div class="columns is-centered">
+        <div class="column">
+          <p><strong>Overlapped Speech</strong></p>
+          <div class="video-placeholder">Video 1</div>
+        </div>
+        <div class="column">
+          <p><strong>Prediction 1 (Left Speaker)</strong></p>
+          <div class="video-placeholder">Video 2</div>
+        </div>
+        <div class="column">
+          <p><strong>Prediction 2 (Right Speaker)</strong></p>
+          <div class="video-placeholder">Video 3</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Demo Audio</h2>
+      <p class="has-text-centered mb-4">Comparison of separated outputs obtained by using the same input for three models: AVDiffuSS (ours), VisualVoice [1], and DiffSep [2].</p>
+      
+      <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+        <thead>
+          <tr>
+            <th>Type of Audio</th>
+            <th>Input</th>
+            <th>Pred</th>
+            <th>GT</th>
+            <th>AVDiffuSS (Ours)</th>
+            <th>VisualVoice [1]</th>
+            <th>DiffSep [2]</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Male + Male</td>
+            <td>Audio</td>
+            <td>1 / 2</td>
+            <td>1 / 2</td>
+            <td>Audio 1 / 2</td>
+            <td>Audio 1 / 2</td>
+            <td>Audio 1 / 2</td>
+          </tr>
+          <tr>
+            <td>Female + Female</td>
+            <td>Audio</td>
+            <td>1 / 2</td>
+            <td>1 / 2</td>
+            <td>Audio 1 / 2</td>
+            <td>Audio 1 / 2</td>
+            <td>Audio 1 / 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          This website is based on the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies website template</a>, which is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>

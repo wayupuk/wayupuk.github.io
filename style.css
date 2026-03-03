@@ -1,0 +1,57 @@
+/* Base Font setup matching the Nerfies Academic Theme */
+body {
+  font-family: 'Google Sans', sans-serif;
+  background-color: #ffffff;
+  color: #4a4a4a;
+}
+
+/* Typography refinements */
+.publication-title {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.publication-authors {
+  font-weight: 400;
+  color: #363636;
+}
+
+.author-block {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/* Abstract Text Formatting */
+.content.has-text-justified {
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Video Placeholders (To simulate the KAIST video grid) */
+.video-placeholder {
+  background-color: #f5f5f5;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7a7a7a;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Table refinements for the Audio Demo Section */
+.table th, .table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #f5f5f5;
+  padding: 3rem 1.5rem;
+  margin-top: 3rem;
+}

@@ -55,3 +55,56 @@ body {
   padding: 3rem 1.5rem;
   margin-top: 3rem;
 }
+
+
+/* Container to allow horizontal scrolling on small screens */
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.academic-table {
+  width: 100%;
+  border-collapse: collapse; /* Crucial for clean border lines */
+  font-family: 'Times New Roman', Times, serif; /* The classic academic font */
+  text-align: center;
+}
+
+/* The thick black lines at the very top and very bottom of the header */
+.academic-table thead {
+  border-top: 2px solid #000000;
+  border-bottom: 1.5px solid #000000;
+}
+
+/* Default table header styling */
+.academic-table th {
+  font-weight: normal; /* Academic tables usually don't bold everything */
+  padding: 6px 10px;
+  white-space: nowrap;
+}
+
+/* Specific Utilities */
+.bold-text {
+  font-weight: bold !important;
+}
+
+.align-bottom {
+  vertical-align: bottom;
+}
+
+/* The thin sub-section divider lines */
+.bottom-line {
+  border-bottom: 1px solid #888888;
+}
+
+/* Padding adjustments to mimic the breathing room in the image */
+.pb-small {
+  padding-bottom: 8px !important;
+}
+
+/* The invisible gap between the two main scenario blocks */
+.spacer {
+  width: 30px; 
+  min-width: 30px;
+}

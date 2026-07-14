@@ -7,6 +7,7 @@
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
   
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -16,24 +17,21 @@
     <div class="hero-body">
       <div class="container is-max-desktop has-text-centered">
         <h1 class="title is-1 publication-title">
-          Some that will be created soon<br>
-          <span class="subtitle is-3">ABout abcdef</span>
+          AV-FlowSep: Audio-Visual Target Speaker Separation via Flow Matching<br>
+          <span class="subtitle is-3"></span>
         </h1>
         
         <div class="is-size-5 publication-authors">
-          <span class="author-block">Anonymous Authors <sup>1</sup></span>
-          <span class="author-block">Anonymous Authors<sup>2</sup></span>
-          <span class="author-block">Anonymous Authors<sup>3</sup></span>
+          <span class="author-block">Pattara Tipaksorn <sup>1</sup></span>
+          <span class="author-block">Wayupuk Sommuang<sup>2</sup></span>
+          <span class="author-block">Kwanchiva Thangthai<sup>3</sup></span>
         </div>
 
         <div class="is-size-5 publication-authors mt-3">
-          <span class="author-block"><sup>1</sup>Some institute on the earth</span>
+          <span class="author-block"><sup>1</sup>Core Artificial Intelligence Research Team, NECTEC</span>
         </div>
         <div class="is-size-5 publication-authors mt-3">
-          <span class="author-block"><sup>2</sup>Some institute on the earth</span>
-        </div>
-        <div class="is-size-5 publication-authors mt-3">
-          <span class="author-block"><sup>3</sup>Some institute on the earth</span>
+          <span class="author-block"><sup>2</sup>Sirindhorn International Institute of Technology (SIIT), Thammasat University</span>
         </div>
 
         <div class="column has-text-centered mt-4">
@@ -54,52 +52,73 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              The objective of this work is to extract target speaker’s voice from a mixture of voices using visual cues. Existing works on audio-visual speech separation have demonstrated their performance with promising intelligibility, but maintaining naturalness remains a challenge. To address this issue, we propose AVDiffuSS, 
-              an audio-visual speech separation model based on a diffusion mechanism known for its capability in generating natural samples. For an effective fusion of the two modalities for diffusion, we also propose a cross-attention-based feature fusion mechanism. This mechanism is specifically tailored for the speech domain to integrate the phonetic information from audiovisual correspondence in speech generation. 
-              In this way, the fusion process maintains the high temporal resolution of the features, without excessive computational requirements. We demonstrate that the proposed framework achieves state-of-the-art results on two benchmarks, including VoxCeleb2 and LRS3, producing speech with notably better naturalness.
+              This work addresses the task of separating a target speaker’s
+              voice from mixtures using visual cues. While existing discrim-
+              inative approaches achieve strong speech intelligibility, gener-
+              ative diffusion-based methods improve perceptual quality but
+              require many iterative refinement steps. To address these limi-
+              tations, we propose AV-FlowSep, an audio-visual target speaker
+              separation based on conditional flow matching to learn direct
+              transport paths from mixture to clean mel-spectrogram. We
+              adopt a latent Diffusion Transformer where temporal visual
+              cues from the target speaker are integrated via cross-attention.
+              We demonstrate that AV-FlowSep can generate high perceptual
+              quality with as few as a single inference step. Experiments on
+              VoxCeleb2 and LRS2 across both speech-speech and speech-
+              noise scenarios, show that our approach achieves competitive
+              or superior performance compared to existing baselines, with
+              strong cross-dataset generalization and practical computational
+              efficiency.
             </p>
+            <b>
+              Github code is provided here 
+              <a href="https://github.com/CAI-NECTEC/AV-FlowSep.git">link</a>
+            </b>
             <br>
-            <b>Github code is provide here <a href="">link</a></b>
+            <b>
+              Huggingface page is provided here 
+              <a href="https://huggingface.co/nectec/av-flowsep">link</a>
+            </b>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
-  
   <section class="section">
     <div class="container is-max-desktop has-text-centered">
       <h2 class="title is-3">Demo Video</h2>
-      <p class="mb-4">We demonstrate our model performance below</p>
       
       <div class="columns is-centered">
         <div class="column">
           <p><strong>Overlapped Speech</strong></p>
           <div class="video-placeholder">
-            <video controls>
-              <source src="asset/video/overlap.mp4",type="video/mp4">
-
+            <video controls >
+              <source src="asset/video/audio_100/id03347_uPerly0ah9o_00410_mix.mp4",type="video/mp4">
             </video>
           </div>
         </div>
         <div class="column">
-          <p><strong>Prediction 1 (Left Speaker)</strong></p>
+          <p><strong>Prediction speaker</strong></p>
           <div class="video-placeholder">
             <video controls>
-              <source src="asset/video/overlap.mp4",type="video/mp4">
-
+              <source src="asset/video/audio_100/id03347_uPerly0ah9o_00410_x_hat.mp4",type="video/mp4">
             </video>
           </div>
         </div>
         <div class="column">
-          <p><strong>Prediction 2 (Right Speaker)</strong></p>
+          <p><strong>Overlapped Speech</strong></p>
           <div class="video-placeholder">
             <video controls>
-              <source src="asset/video/overlap.mp4",type="video/mp4">
-
+              <source src="asset/video/audio_120/id07961_xGgbSLovy5M_00415_mix.mp4",type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <p><strong>Prediction speaker</strong></p>
+          <div class="video-placeholder">
+            <video controls>
+              <source src="asset/video/audio_120/id07961_xGgbSLovy5M_00415_x_hat.mp4",type="video/mp4">
             </video>
           </div>
         </div>
@@ -107,26 +126,38 @@
 
       <div class="columns is-centered">
         <div class="column">
+          <p><strong>Overlapped Speech</strong></p>
           <div class="video-placeholder">
             <video controls>
-              <source src="asset/video/overlap.mp4",type="video/mp4">
+              
+              <source src="asset/video/audio_168/id05999_MJwLq17VoMA_00154_mix.mp4",type="video/mp4">
 
             </video>
           </div>
         </div>
         <div class="column">
+          <p><strong>Prediction speaker</strong></p>
           <div class="video-placeholder">
             <video controls>
-              <source src="asset/video/overlap.mp4",type="video/mp4">
+              <source src="asset/video/audio_168/id05999_MJwLq17VoMA_00154_x_hat.mp4",type="video/mp4">
 
             </video>
           </div>
         </div>
         <div class="column">
+          <p><strong>Overlapped Speech</strong></p>
           <div class="video-placeholder">
             <video controls>
-              <source src="asset/video/overlap.mp4",type="video/mp4">
+              <source src="asset/video/audio_60/id03677_B-lLv4iR2ps_00021_mix.mp4",type="video/mp4">
 
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <p><strong>Prediction speaker</strong></p>
+          <div class="video-placeholder">
+            <video controls>
+              <source src="asset/video/audio_60/id03677_B-lLv4iR2ps_00021_x_hat.mp4",type="video/mp4">
             </video>
           </div>
         </div>
@@ -135,26 +166,37 @@
 
       <div class="columns is-centered">
         <div class="column">
+          <p><strong>Overlapped Speech</strong></p>
           <div class="video-placeholder">
             <video controls>
-              <source src="asset/video/overlap.mp4",type="video/mp4">
+              <source src="asset/video/audio_80/id05459__bN6uxZG4Io_00281_mix.mp4",type="video/mp4">
 
             </video>
           </div>
         </div>
         <div class="column">
+          <p><strong>Prediction speaker</strong></p>
           <div class="video-placeholder">
             <video controls>
-              <source src="asset/video/overlap.mp4",type="video/mp4">
+              <source src="asset/video/audio_80/id05459__bN6uxZG4Io_00281_x_hat.mp4",type="video/mp4">
 
             </video>
           </div>
         </div>
         <div class="column">
+          <p><strong>Overlapped Speech</strong></p>
           <div class="video-placeholder">
             <video controls>
-              <source src="asset/video/overlap.mp4",type="video/mp4">
+              <source src="asset/video/audio_90/id08701_fwq9rtyar_0_00309_mix.mp4",type="video/mp4">
 
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <p><strong>Prediction speaker</strong></p>
+          <div class="video-placeholder">
+            <video controls>
+              <source src="asset/video/audio_90/id08701_fwq9rtyar_0_00309_x_hat.mp4",type="video/mp4">
             </video>
           </div>
         </div>
@@ -162,7 +204,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <!-- <section class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Demo Audio</h2>
       <p class="has-text-centered mb-4">Comparison of the model across various model</p>
@@ -171,17 +213,15 @@
         <thead>
           <tr>
             <th>Type of Audio</th>
-            <th>Input</th>
-            <th>Pred</th>
             <th>GT</th>
-            <th>AVDiffuSS (Ours)</th>
-            <th>VisualVoice [1]</th>
-            <th>DiffSep [2]</th>
+            <th>Male + Male</th>
+            <th>Male + Female]</th>
+            <th>Female + Female</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Male + Male</td>
+            <td>AVDiffuse</td>
             <td>Audio</td>
             <td>1 / 2</td>
             <td>1 / 2</td>
@@ -190,7 +230,25 @@
             <td>Audio 1 / 2</td>
           </tr>
           <tr>
-            <td>Female + Female</td>
+            <td>VisualVoice</td>
+            <td>Audio</td>
+            <td>1 / 2</td>
+            <td>1 / 2</td>
+            <td>Audio 1 / 2</td>
+            <td>Audio 1 / 2</td>
+            <td>Audio 1 / 2</td>
+          </tr>
+          <tr>
+            <td>VisualVoice</td>
+            <td>Audio</td>
+            <td>1 / 2</td>
+            <td>1 / 2</td>
+            <td>Audio 1 / 2</td>
+            <td>Audio 1 / 2</td>
+            <td>Audio 1 / 2</td>
+          </tr>
+          <tr>
+            <td>VisualVoice</td>
             <td>Audio</td>
             <td>1 / 2</td>
             <td>1 / 2</td>
@@ -285,14 +343,14 @@
       </div>
     </div>
   </section>
-  
+   -->
 
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Architecture</h2>
-            <embed src="asset/dummyfile.png"></embed>
+            <embed src="asset/image/Architecture.png" width="600" height="600"></embed>
         </div>
       </div>
     </div>

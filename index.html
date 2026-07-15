@@ -16,13 +16,14 @@
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop has-text-centered is-centered">
+        <div style="display: flex; justify-content: flex-end; padding-bottom: 1.5rem;">
+          <img src="asset/image/Interspeech.png" alt="Interspeech 2026" style="width: 25%; min-width: 200px; height: auto;">
+        </div>
         <h1 class="title is-1 publication-title">
           AV-FlowSep: Audio-Visual Target Speaker Separation via Flow Matching<br>
           <span class="subtitle is-3"></span>
         </h1>
-        <div class="column is-centere">
-            <embed src="asset/image/inter.svg" width="30%" height="30%"></embed>
-        </div>
+        
         
         <div class="is-size-5 publication-authors">
           <span class="author-block">Pattara Tipaksorn <sup>1</sup></span>
@@ -384,34 +385,51 @@
   </section>
    -->
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 is-centered has-text-centered">Architecture</h2>
-      <div class="columns is-centered has-text-centered" style="margin-left: 120px; margin-right: 120px;">
-        <div class="column is-four-fifths ">
-          
-            <embed src="asset/image/Architecture.png" width="600" height="600"></embed>
-        </div>
-        <div class="column is-four-fifths">
-            <embed src="asset/image/Architecture2.png" width="600" height="600"></embed>
-        </div>
-      </div>
-      <h3>(Left) AV-FlowSep adopt DiT as base network to learn a vector field to transform mel-spectrogram into clean mel-spectrogram, by recieveing Visual features and time step T as external values.</h3>
-      <h3>(Right) Visual features and timesteps T will pass the MLP with separate injection path.</h3>
-    </div>
-  </section>
-
-  <section>
+<section class="section">
   <div class="container is-max-desktop">
-        <h2 class="title is-3 is-centered has-text-centered">Benchmark</h2>
-        <div class="columns is-centered">
-          <div class="column" >
-              <embed src="asset/image/benchmark.png" width="1160" height="524"></embed>
-          </div>
-        </div>
+    
+    <h2 class="title is-3 has-text-centered">Architecture</h2>
+    
+    <!-- Changed to is-desktop so they sit side-by-side on PC, but stack vertically on phones -->
+    <div class="columns is-centered is-desktop">
+      
+      <!-- Left Image Column -->
+      <div class="column is-half has-text-centered">
+        <!-- Replaced <embed> with <img> and added max-width: 100% so it shrinks on phones -->
+        <img src="asset/image/Architecture.png" alt="Architecture Left" style="max-width: 100%; height: auto;">
       </div>
+      
+      <!-- Right Image Column -->
+      <div class="column is-half has-text-centered">
+        <img src="asset/image/Architecture2.png" alt="Architecture Right" style="max-width: 100%; height: auto;">
+      </div>
+      
+    </div>
 
-  </section>
+    <!-- Grouped the descriptions in a text content block for better spacing -->
+    <div class="content" style="margin-top: 1.5rem;">
+      <p><strong>(Left)</strong> AV-FlowSep adopt DiT as base network to learn a vector field to transform mel-spectrogram into clean mel-spectrogram, by recieveing Visual features and time step T as external values.</p>
+      <p><strong>(Right)</strong> Visual features and timesteps T will pass the MLP with separate injection path.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    
+    <h2 class="title is-3 has-text-centered">Benchmark</h2>
+    
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <!-- Replaced <embed> with <img> and removed the hardcoded 1160 width -->
+        <img src="asset/image/benchmark.png" alt="Benchmark Results" style="max-width: 100%; height: auto;">
+      </div>
+    </div>
+    
+  </div>
+</section>
+
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
